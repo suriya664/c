@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - Counselor</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
+  <link rel="apple-touch-icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
+</head>
+
+<body class="page-register">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <main id="main-content" class="section">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 24px;">
+        <a class="brand" href="index.html"><span class="logo-mark">C</span> Counselor</a>
+      </div>
+      <h2>Register</h2>
+      <p class="lead">Create your account to begin a structured counseling journey.</p>
+      <div class="grid two">
+        <form id="registerForm">
+          <label for="regName">Full Name</label>
+          <input id="regName" type="text" required />
+
+          <label for="regEmail">Email</label>
+          <input id="regEmail" type="email" required />
+
+          <label for="regPassword">Password</label>
+          <input id="regPassword" type="password" required minlength="6" />
+
+          <button type="submit">Register</button>
+          <p id="registerMsg" class="msg"></p>
+          <p class="meta" style="text-align: center; margin-top: 8px;">
+            Already have an account? <a href="login.html">Login</a>
+          </p>
+        </form>
+        <article class="card">
+          <img class="section-image"
+            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1100&q=80"
+            alt="Registration and onboarding image" />
+          <h3>What Happens Next</h3>
+          <p>After signup, you get access to your dashboard, intake steps, and your first counseling milestones.</p>
+          <p>Our onboarding flow helps you define goals quickly and begin with clear direction.</p>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

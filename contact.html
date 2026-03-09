@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Counselor</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
+</head>
+<body class="page-contact">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header>
+    <nav class="container nav">
+      <a class="brand" href="index.html"><span class="logo-mark">C</span> Counselor</a>
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="home2.html">Home 2</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html" class="icon-link" aria-label="Login" title="Login"><span class="icon-user" aria-hidden="true"></span></a></li>
+          <li><a href="dashboard.html" class="icon-link" aria-label="Dashboard" title="Dashboard"><span class="icon-grid" aria-hidden="true"></span></a></li>
+          <li><button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+            <span class="theme-icon">🌙</span>
+          </button></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="section scroll-section hero-banner">
+      <div class="container">
+        <h1>Contact Counselor</h1>
+        <p class="lead">We are here to help you start your counseling journey safely and confidently. Share your goals, and we will guide you to the right counseling format.</p>
+        <div class="grid two" style="margin-top: 18px;">
+          <article class="card"><img class="section-image" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" alt="Counselor office support team" /></article>
+          <article class="card"><h3>Response Promise</h3><p>We usually respond within one business day with next steps, intake guidance, and available session slots.</p><p>For urgent emotional distress, please use immediate crisis resources in the footer.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section scroll-section">
+      <div class="container">
+        <h2>Send a Secure Intake Request</h2>
+        <form id="contactForm" novalidate>
+          <label for="name">Name</label>
+          <input id="name" type="text" autocomplete="name" required />
+
+          <label for="email">Email</label>
+          <input id="email" type="email" autocomplete="email" required />
+
+          <label for="message">How can we help?</label>
+          <textarea id="message" required></textarea>
+
+          <input id="company" class="hidden-field" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <label class="checkbox-row" for="consent">
+            <input id="consent" type="checkbox" required />
+            I consent to be contacted regarding counseling services.
+          </label>
+
+          <button type="submit">Submit Request</button>
+          <p id="contactMsg" class="msg"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section scroll-section">
+      <div class="container">
+        <h2>Visit Us & Contact Details</h2>
+        <div class="grid two">
+          <div class="map-wrap card">
+            <iframe title="Counselor map" src="https://www.google.com/maps?q=Washington%20DC&output=embed"></iframe>
+          </div>
+          <div class="grid">
+            <article class="card"><img class="card-image" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80" alt="Counselor office reception" /><h3>Office Environment</h3><p>A calm, professional space built for confidential conversations.</p></article>
+            <article class="card"><div class="icon-badge">P</div><h3>Phone</h3><p>+1 (202) 555-0191</p></article>
+            <article class="card"><div class="icon-badge">E</div><h3>Email</h3><p>care@counselor.com</p></article>
+            <article class="card"><div class="icon-badge">A</div><h3>Address</h3><p>1200 Career Avenue, Washington, DC</p></article>
+            <article class="card"><div class="icon-badge">H</div><h3>Support Hours</h3><p>Mon-Fri: 9:00 AM - 7:00 PM<br />Sat: 10:00 AM - 2:00 PM</p></article>
+            <article class="card"><img class="card-image" src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=900&q=80" alt="Online counseling setup" /><h3>Online Sessions</h3><p>Secure video counseling is available for remote clients.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h4>Counselor</h4>
+        <p>Evidence-based counseling for individuals, couples, and groups. Confidential and client-focused care.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="tel:+12025550191">+1 (202) 555-0191</a><br /><a href="mailto:care@counselor.com">care@counselor.com</a></p>
+      </div>
+      <div>
+        <h4>Crisis Support</h4>
+        <p>If in immediate danger, call 911.<br /><a href="https://988lifeline.org" target="_blank" rel="noopener">988 Suicide & Crisis Lifeline</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+

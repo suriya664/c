@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Counselor</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
+  <link rel="apple-touch-icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
+</head>
+
+<body class="page-dashboard">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="container">
+    <header class="dashboard-header">
+      <a class="brand" href="index.html"><span class="logo-mark">C</span> Counselor</a>
+      <div style="display: flex; gap: 16px; align-items: center;">
+        <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <button id="logoutBtn" class="btn secondary" type="button" style="padding: 8px 16px;">Logout</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="welcome-section">
+        <h2>Welcome back, <span id="welcomeName">User</span>!</h2>
+        <p class="lead"
+          style="color: rgba(255, 255, 255, 0.9) !important; text-align: left; font-size: 1.1rem; margin-bottom: 0;">
+          You're making great progress. Your next session is scheduled for <span style="font-weight: 700;">Monday at
+            5:00 PM</span>.</p>
+      </section>
+
+      <div class="dashboard-grid">
+        <div class="main-content-flow">
+          <section class="glass-card" style="margin-bottom: 24px;">
+            <div class="progress-header">
+              <h3 style="margin: 0; text-align: left;">Your Progress</h3>
+              <span class="status-badge">Growth Plan Active</span>
+            </div>
+            <p class="meta" style="text-align: left; margin-bottom: 20px;">Current counseling goals and achievement
+              milestones</p>
+
+            <div class="progress-list">
+              <div class="progress-item">
+                <div class="progress-label">Stress reduction routine</div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 80%"></div>
+                  <span class="progress-text">80%</span>
+                  <input type="range" class="progress-slider" min="0" max="100" value="80"
+                    title="Adjust stress reduction progress">
+                </div>
+              </div>
+              <div class="progress-item">
+                <div class="progress-label">Interview confidence plan</div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 60%"></div>
+                  <span class="progress-text">60%</span>
+                  <input type="range" class="progress-slider" min="0" max="100" value="60"
+                    title="Adjust interview confidence progress">
+                </div>
+              </div>
+              <div class="progress-item">
+                <div class="progress-label">Communication goals</div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 45%"></div>
+                  <span class="progress-text">45%</span>
+                  <input type="range" class="progress-slider" min="0" max="100" value="45"
+                    title="Adjust communication goals progress">
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="glass-card">
+            <div class="checklist-header">
+              <h3 style="text-align: left; margin-bottom: 4px;">Action Checklist</h3>
+              <p class="meta" style="text-align: left;">Tasks to complete before your next session</p>
+            </div>
+            <ul class="check-list-modern">
+              <li>Share wins and blockers from this week</li>
+              <li>Upload your latest resume version</li>
+              <li>Prepare two interview questions to practice</li>
+              <li>Set one measurable target for next week</li>
+            </ul>
+          </section>
+        </div>
+
+        <aside class="glass-sidebar">
+          <section class="glass-card user-quick-info">
+            <div class="logo-mark" style="margin: 0 auto 16px;">U</div>
+            <h4 id="dashboardUser" style="margin-bottom: 4px;">User Name</h4>
+            <p class="meta">Premium Member</p>
+            <div class="upcoming-session">
+              <h4 style="color: var(--primary); margin-bottom: 4px; font-size: 0.9rem;">Next Milestone</h4>
+              <p style="font-size: 0.85rem;">Mock Interview Review</p>
+            </div>
+          </section>
+
+          <section class="glass-card">
+            <h4 style="margin-bottom: 12px; text-align: left;">Weekly Focus</h4>
+            <p style="font-size: 0.9rem; text-align: left; color: var(--muted);">Finish profile updates, complete one
+              mock interview, and submit five targeted applications.</p>
+            <img class="section-image"
+              src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80"
+              alt="Weekly analysis" style="margin-top: 16px; height: 120px;">
+          </section>
+        </aside>
+      </div>
+
+      <div class="action-bar">
+        <a href="services.html" class="btn">Explore New Services</a>
+      </div>
+    </main>
+  </div>
+
+  <footer style="margin-top: 80px; padding: 20px 0; text-align: center; border-top: 1px solid var(--border);">
+    <p class="meta">&copy; 2024 Counselor Dashboard. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const session = JSON.parse(localStorage.getItem('cc_session') || 'null');
+      if (session && session.name) {
+        const welcomeName = document.getElementById('welcomeName');
+        if (welcomeName) welcomeName.textContent = session.name.split(' ')[0];
+
+        const dashboardUser = document.getElementById('dashboardUser');
+        if (dashboardUser) dashboardUser.textContent = session.name;
+
+        const avatarMark = document.querySelector('.user-quick-info .logo-mark');
+        if (avatarMark) avatarMark.textContent = session.name.charAt(0).toUpperCase();
+      }
+    });
+  </script>
+</body>
+
+</html>

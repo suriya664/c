@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Counselor</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
+  <link rel="apple-touch-icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
+</head>
+
+<body class="page-login">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <main id="main-content" class="section">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 24px;">
+        <a class="brand" href="index.html"><span class="logo-mark">C</span> Counselor</a>
+      </div>
+      <h2>Login</h2>
+      <p class="lead">Access your counselor dashboard and continue your progress plan.</p>
+      <div class="grid two">
+        <form id="loginForm">
+          <label for="loginEmail">Email</label>
+          <input id="loginEmail" type="email" required />
+
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" type="password" required />
+
+          <button type="submit">Login</button>
+          <p id="loginMsg" class="msg"></p>
+          <p class="meta" style="text-align: center; margin-top: 8px;">
+            New here? <a href="register.html">Create an account</a>
+          </p>
+        </form>
+        <article class="card">
+          <img class="section-image" src="assets/images/login-support.svg" alt="Counselor support login visual" />
+          <h3>Inside Your Dashboard</h3>
+          <p>Track counseling milestones, next-session priorities, and accountability actions in one place.</p>
+          <p>Review your progress history and focus on the highest-impact career tasks every week.</p>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
