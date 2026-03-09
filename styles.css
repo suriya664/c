@@ -602,6 +602,77 @@ form {
   margin: 0 auto;
 }
 
+.auth-form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+}
+
+.forgot-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.social-auth {
+  margin-top: 24px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+
+.social-auth p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 12px;
+  position: relative;
+  background: var(--surface);
+  display: inline-block;
+  padding: 0 10px;
+  top: -32px;
+}
+
+.social-btns {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: -16px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.social-btn:hover {
+  background: var(--accent);
+  border-color: var(--primary);
+}
+
+.social-btn svg {
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+}
+
 label {
   display: block;
   margin-bottom: 6px;
@@ -997,8 +1068,13 @@ footer {
 .page-register form,
 .page-login .card,
 .page-register .card {
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.98);
   border-color: rgba(255, 255, 255, 0.62);
+}
+
+.page-login .social-auth p,
+.page-register .social-auth p {
+  background: #fff;
 }
 
 .page-login label,
@@ -1042,6 +1118,21 @@ footer {
 [data-theme="dark"] .page-login input::placeholder,
 [data-theme="dark"] .page-register input::placeholder {
   color: #a0aec0;
+}
+
+[data-theme="dark"] .page-login .social-auth p,
+[data-theme="dark"] .page-register .social-auth p {
+  background: #1e2736;
+}
+
+[data-theme="dark"] .social-btn {
+  background: rgba(45, 55, 72, 0.6);
+  border-color: rgba(125, 146, 171, 0.3);
+}
+
+[data-theme="dark"] .social-btn:hover {
+  background: rgba(45, 55, 72, 1);
+  border-color: var(--primary);
 }
 
 .page-login::before {
